@@ -116,9 +116,35 @@
           }
         }
       }
+    },
+    "test1-feature-lazy-blogs": {
+      "projectType": "library",
+      "root": "libs/test1/feature/lazy/blogs",
+      "sourceRoot": "libs/test1/feature/lazy/blogs/src",
+      "prefix": "test",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/test1/feature/lazy/blogs"],
+          "options": {
+            "jestConfig": "libs/test1/feature/lazy/blogs/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/test1/feature/lazy/blogs/src/**/*.ts",
+              "libs/test1/feature/lazy/blogs/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
+    "analytics": "8d5b28f0-293e-443b-83fa-ee4f8d49662e",
     "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
